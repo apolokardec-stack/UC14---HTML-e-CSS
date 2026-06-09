@@ -1,0 +1,156 @@
+<section class="equipe">
+    <h1>Nossa Equipe</h1>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+
+    /* Imagem de fundo */
+    background-image: url("img/fundo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+}
+
+.equipe{
+    text-align: center;
+    padding: 50px;
+}
+
+.equipe h1{
+    color: white;
+    font-size: 3rem;
+    text-shadow: 0 0 15px cyan;
+    margin-bottom: 40px;
+}
+
+.container-usuarios{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* CARD CIRCULAR */
+.card{
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    box-shadow:
+        0 0 20px cyan,
+        0 0 40px cyan,
+        0 0 60px cyan;
+
+    transition: 0.5s;
+}
+
+.card:hover{
+    transform: scale(1.1) rotate(5deg);
+
+    box-shadow:
+        0 0 30px #00ffff,
+        0 0 60px #00ffff,
+        0 0 90px #00ffff;
+}
+
+.card img{
+    width: 90px;
+    height: 90px;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid white;
+}
+
+.card h2{
+    margin-top: 10px;
+}
+
+.card h3{
+    color: cyan;
+    margin: 5px 0;
+}
+
+.card p{
+    width: 80%;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card button{
+    background: cyan;
+    color: black;
+
+    border: none;
+    padding: 8px 15px;
+
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.card button:hover{
+    background: white;
+}
+    </style>
+
+    <div class="container-usuarios">
+
+        <div class="card">
+            <img src="img1.jpg" alt="João">
+            <h2>Joao dias</h2>
+            <h3>inovador de comandos</h3>
+            <p>Especialista em criar scripts</p>
+            <button>Ver Perfil</button>
+        </div>
+
+        <div class="card">
+            <img src="img4.jpg" alt="Maria">
+            <h2>Maria joaninha<h2>
+            <h3>Designer</h3>
+            <p>Criadora de desinges inovadores</p>
+            <button>Ver Perfil</button>
+        </div>
+
+        <div class="card">
+            <img src="img3.jpg" alt="Pedro">
+            <h2>Pedro neymar</h2>
+            <h3>quebrador de codigos</h3>
+            <p>Especialista em hackear contas.</p>
+            <button>Ver Perfil</button>
+        </div>
+
+        <div class="card">
+            <img src="img5.jpg" alt="Ana">
+            <h2>augusto pereira</h2>
+            <h3>Gerente</h3>
+            <p>Coordena um bancos e empresas.</p>
+            <button>Ver Perfil</button>
+        </div>
+
+    </div>
+</section>
