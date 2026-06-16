@@ -1,0 +1,42 @@
+h1{
+    .titulo{
+    font-size: 70px;
+    text-align: center;
+    margin-top: 30px;
+
+    /* Fonte de estilo urbano */
+    font-family: Impact, fantasy;
+
+    color: #00ff88;
+
+    /* Contorno preto */
+    -webkit-text-stroke: 2px black;
+
+    /* Sombra e brilho */
+    text-shadow:
+        0 0 5px #00ff88,
+        0 0 15px #00ff88,
+        0 0 30px #00ff88,
+        3px 3px 0 black;
+
+    animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho{
+    from{
+        text-shadow:
+            0 0 5px #00ff88,
+            0 0 15px #00ff88,
+            0 0 30px #00ff88,
+            3px 3px 0 black;
+    }
+
+    to{
+        text-shadow:
+            0 0 15px #00ff88,
+            0 0 35px #00ff88,
+            0 0 60px #00ff88,
+            3px 3px 0 black;
+    }
+}
+}
