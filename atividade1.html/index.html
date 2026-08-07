@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Desconto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+        .frete {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Resumo da Compra</h2>
+        <p id="nome"></p>
+        <p id="valorCompra"></p>
+        <p id="desconto"></p>
+        <p id="valorDesconto"></p>
+        <p id="valorFinal"></p>
+        <p id="frete" class="frete"></p>
+    </div>
+
+    <script>
+        // 1. Variáveis
+        const nomeCliente = "Maria";
+        const valorCompra = 650.00;
+        const clienteVip = false;
+
+        let percentualDesconto = 0;
+
+        // 2. Regras de Desconto
+        if (clienteVip) {
+            percentualDesconto = 20;
+        } else if (valorCompra >= 500) {
+            percentualDesconto = 15;
+        } else if (valorCompra >= 200) {
+            percentualDesconto = 10;
+        } else {
+            percentualDesconto = 0;
+        }
+
+        // 3. Cálculos
+        const valorDesconto = (valorCompra * percentualDesconto) / 100;
+        const valorFinal = valorCompra - valorDesconto;
+        
+        // Mensagem do Frete
+        const mensagemFrete = valorFinal > 1000 
+            ? "Parabéns! Você ganhou frete grátis." 
+            : "Frete será cobrado normalmente.";
+
+        // 4. Exibição na Tela (HTML)
+        document.getElementById("nome").innerText = `Nome: ${nomeCliente}`;
+        document.getElementById("valorCompra").innerText = `Valor da compra: R$ ${valorCompra.toFixed(2)}`;
+        document.getElementById("desconto").innerText = `Desconto: ${percentualDesconto}%`;
+        document.getElementById("valorDesconto").innerText = `Valor do desconto: R$ ${valorDesconto.toFixed(2)}`;
+        document.getElementById("valorFinal").innerText = `Valor final: R$ ${valorFinal.toFixed(2)}`;
+        document.getElementById("frete").innerText = mensagemFrete;
+
+        // 5. Exibição no Console do Navegador
+        console.log(`Nome: ${nomeCliente}`);
+        console.log(`Valor da compra: R$ ${valorCompra.toFixed(2)}`);
+        console.log(`Desconto: ${percentualDesconto}%`);
+        console.log(`Valor do desconto: R$ ${valorDesconto.toFixed(2)}`);
+        console.log(`Valor final: R$ ${valorFinal.toFixed(2)}`);
+        console.log(mensagemFrete);
+    </script>
+
+</body>
+</html>
