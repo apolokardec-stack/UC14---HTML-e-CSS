@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-width=1.0">
+    <title>Exercícios de Lógica - JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios em Execução...</h1>
+    <p>Pressione <strong>F12</strong> e abra a aba <strong>Console</strong> para ver os resultados das Questões 1 e 2.</p>
+    <p>Responda às janelas (prompts) que aparecerem na tela para as Questões de 3 a 6.</p>
+
+    <script>
+        // ==========================================
+        // Questão 1 - Operações matemáticas
+        // ==========================================
+        console.log("--- Questão 1 ---");
+        let valor1 = 10;
+        let valor2 = 5;
+
+        console.log("Soma:", valor1 + valor2);
+        console.log("Subtração:", valor1 - valor2);
+        console.log("Multiplicação:", valor1 * valor2);
+        console.log("Divisão:", valor1 / valor2);
+
+        // ==========================================
+        // Questão 2 - Dobro e triplo
+        // ==========================================
+        console.log("\n--- Questão 2 ---");
+        let numero = 8;
+        
+        console.log("O dobro do número é:", numero * 2);
+        console.log("O triplo do número é:", numero * 3);
+
+        // ==========================================
+        // Questão 3 - Nome e idade do usuário
+        // ==========================================
+        console.log("\n--- Questão 3 ---");
+        let nome = prompt("Questão 3: Qual é o seu nome?");
+        let idade = prompt("Questão 3: Qual é a sua idade?");
+        
+        console.log(`Olá, ${nome}! Seja bem-vindo! Você tem ${idade} anos.`);
+
+        // ==========================================
+        // Questão 4 - Média de três notas
+        // ==========================================
+        console.log("\n--- Questão 4 ---");
+        // O uso do Number() transforma o texto digitado pelo usuário em número para não dar erro na soma
+        let nota1 = Number(prompt("Questão 4: Digite a Nota 1 (ex: 8):"));
+        let nota2 = Number(prompt("Questão 4: Digite a Nota 2 (ex: 7):"));
+        let nota3 = Number(prompt("Questão 4: Digite a Nota 3 (ex: 9):"));
+        
+        let media = (nota1 + nota2 + nota3) / 3;
+        
+        console.log(`Nota 1: ${nota1}`);
+        console.log(`Nota 2: ${nota2}`);
+        console.log(`Nota 3: ${nota3}`);
+        console.log(`Média: ${media.toFixed(2)}`); // toFixed(2) limita para 2 casas decimais
+
+        // ==========================================
+        // Questão 5 - Sistema de login
+        // ==========================================
+        console.log("\n--- Questão 5 ---");
+        let usuarioCorreto = "admin";
+        let senhaCorreta = "1234";
+
+        let usuarioDigitado = prompt("Questão 5: Digite o Usuário:");
+        let senhaDigitada = prompt("Questão 5: Digite a Senha:");
+
+        if (usuarioDigitado === usuarioCorreto && senhaDigitada === senhaCorreta) {
+            console.log("Login realizado com sucesso!");
+        } else if (usuarioDigitado !== usuarioCorreto) {
+            console.log("Usuário incorreto.");
+        } else if (senhaDigitada !== senhaCorreta) {
+            console.log("Senha incorreta.");
+        }
+
+        // ==========================================
+        // Questão Extra - Número maior
+        // ==========================================
+        console.log("\n--- Número Maior ---");
+        let num1 = Number(prompt("Última Questão: Digite o primeiro número:"));
+        let num2 = Number(prompt("Última Questão: Digite o segundo número:"));
+
+        if (num1 > num2) {
+            console.log(`O maior número é ${num1}.`);
+        } else if (num2 > num1) {
+            console.log(`O maior número é ${num2}.`);
+        } else {
+            console.log(`Os números são iguais (${num1}).`);
+        }
+    </script>
+</body>
+</html>
